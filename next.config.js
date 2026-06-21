@@ -1,10 +1,13 @@
 /** @type {import('next').NextConfig} */
+const repoName = "sample-Tamil-studio";
+
 const nextConfig = {
+  output: "export",
+  basePath: `/${repoName}`,
+  assetPrefix: `/${repoName}/`,
+  trailingSlash: true,
   images: {
-    remotePatterns: [
-      { protocol: "https", hostname: "images.unsplash.com" },
-      { protocol: "https", hostname: "plus.unsplash.com" },
-    ],
+    unoptimized: true,
   },
 };
 
